@@ -45,6 +45,7 @@
                                     <outlet property="nameLabel" destination="X4T-gK-krD" id="PEe-fk-h4L"/>
                                     <outlet property="photoImageView" destination="3Qk-Sy-m9m" id="Uqq-6a-Rhr"/>
                                     <outlet property="ratingControl" destination="ffB-uV-rfN" id="Oqv-kH-GHl"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="BVb-up-mNU"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -70,11 +71,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MealViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="300" verticalHuggingPriority="300" ambiguous="YES" preservesSuperviewLayoutMargins="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NA1-6g-l3E">
-                                <rect key="frame" x="47" y="106" width="320" height="404"/>
+                                <rect key="frame" x="47" y="138" width="320" height="404"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y44-4P-IaF" userLabel="nameTextField">
                                         <rect key="frame" x="92" y="0.0" width="136" height="40"/>
@@ -112,7 +113,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Meal" id="LP0-bX-WI1">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Ulr-0M-HOm"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Ulr-0M-HOm">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="9Jj-Y2-WEP"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="Rvr-OH-mgI">
                             <connections>
                                 <segue destination="ahW-wH-eVB" kind="unwind" unwindAction="unwindToMealListWithSender:" id="829-xy-PBE"/>
@@ -175,10 +180,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lY3-Bu-IVm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1073.913043478261" y="124.55357142857142"/>
+            <point key="canvasLocation" x="1094" y="-207"/>
         </scene>
     </scenes>
     <resources>
         <image name="Image" width="1732" height="2309"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="BVb-up-mNU"/>
+    </inferredMetricsTieBreakers>
 </document>
