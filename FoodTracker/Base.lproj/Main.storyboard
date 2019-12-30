@@ -35,7 +35,7 @@
                                             <rect key="frame" x="129" y="40" width="252" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </stackView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="3Qk-Sy-m9m">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="3Qk-Sy-m9m">
                                             <rect key="frame" x="0.0" y="0.0" width="121" height="90"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -74,16 +74,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="300" verticalHuggingPriority="300" ambiguous="YES" preservesSuperviewLayoutMargins="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NA1-6g-l3E">
-                                <rect key="frame" x="47" y="138" width="320" height="404"/>
+                            <stackView opaque="NO" contentMode="center" horizontalHuggingPriority="300" verticalHuggingPriority="300" preservesSuperviewLayoutMargins="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NA1-6g-l3E">
+                                <rect key="frame" x="0.0" y="138" width="2309" height="2915"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y44-4P-IaF" userLabel="nameTextField">
-                                        <rect key="frame" x="92" y="0.0" width="136" height="40"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y44-4P-IaF" userLabel="nameTextField">
+                                        <rect key="frame" x="0.0" y="0.0" width="2309" height="562"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="wuB-3x-vXk">
-                                        <rect key="frame" x="0.0" y="40" width="320" height="320"/>
+                                    <imageView clipsSubviews="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wuB-3x-vXk">
+                                        <rect key="frame" x="0.0" y="562" width="2309" height="2309"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="wuB-3x-vXk" secondAttribute="height" multiplier="1:1" id="UCa-h9-7Je"/>
@@ -96,8 +96,8 @@
                                             <outletCollection property="gestureRecognizers" destination="kfI-uJ-GdO" appends="YES" id="TvU-G2-qj4"/>
                                         </connections>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="twD-xG-Na0" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="34" y="360" width="252" height="44"/>
+                                    <stackView opaque="NO" contentMode="center" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="twD-xG-Na0" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="2871" width="2309" height="44"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -108,7 +108,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="NA1-6g-l3E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5b9-JH-CCo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NA1-6g-l3E" secondAttribute="trailing" id="h1u-Ss-Ehz"/>
                             <constraint firstItem="NA1-6g-l3E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="iRz-sj-rWg"/>
+                            <constraint firstItem="NA1-6g-l3E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tlw-W3-sJA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -135,12 +138,12 @@
                 <exit id="ahW-wH-eVB" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="XZM-ry-ffz">
                     <connections>
-                        <action selector="imageUploader:" destination="BYZ-38-t0r" id="JWL-Bo-QWr"/>
+                        <action selector="imageTapped:" destination="BYZ-38-t0r" id="3IR-ty-xMu"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="kfI-uJ-GdO">
                     <connections>
-                        <action selector="selectImageFromLibrary:" destination="BYZ-38-t0r" id="IdU-60-sx3"/>
+                        <action selector="selectImageFromLibrary:" destination="BYZ-38-t0r" id="aS1-WZ-pys"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

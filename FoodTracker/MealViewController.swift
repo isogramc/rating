@@ -111,15 +111,16 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         dismiss(animated: true, completion: nil)
     }
     
-    
     @IBAction func selectImageFromLibrary(_ sender: UITapGestureRecognizer) {
         //hidekeyboard
-        nameTextField.resignFirstResponder()
-        let imagePickerController = UIImagePickerController()
-        imagePickerController.sourceType = .photoLibrary
-        imagePickerController.delegate = self
-        present(imagePickerController, animated: true, completion: nil)
+               nameTextField.resignFirstResponder()
+               let imagePickerController = UIImagePickerController()
+               imagePickerController.sourceType = .photoLibrary
+               imagePickerController.delegate = self
+        
+               present(imagePickerController, animated: true, completion: nil)
     }
+
    
     //MARK: Private Methods
     
@@ -128,5 +129,7 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         let text = nameTextField.text ?? ""
         saveButton.isEnabled = !text.isEmpty
     }
+    
+    
 }
 
