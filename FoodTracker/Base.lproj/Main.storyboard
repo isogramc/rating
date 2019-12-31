@@ -82,8 +82,11 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <imageView clipsSubviews="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wuB-3x-vXk">
-                                        <rect key="frame" x="0.0" y="562" width="2309" height="2309"/>
+                                    <stackView opaque="NO" contentMode="center" semanticContentAttribute="spatial" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="twD-xG-Na0" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="562" width="2309" height="44"/>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wuB-3x-vXk">
+                                        <rect key="frame" x="0.0" y="606" width="2309" height="2309"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="wuB-3x-vXk" secondAttribute="height" multiplier="1:1" id="UCa-h9-7Je"/>
@@ -96,9 +99,6 @@
                                             <outletCollection property="gestureRecognizers" destination="kfI-uJ-GdO" appends="YES" id="TvU-G2-qj4"/>
                                         </connections>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="center" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="twD-xG-Na0" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="2871" width="2309" height="44"/>
-                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="NA1-6g-l3E" secondAttribute="height" multiplier="80:101" id="Peh-H6-8Xh"/>
